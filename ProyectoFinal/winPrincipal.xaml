@@ -1,0 +1,24 @@
+﻿<Window x:Name="MainWindow" x:Class="ProyectoFinal.winPrincipal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoFinal"
+        mc:Ignorable="d"
+        Title="winPrincipal" Height="381" Width="603" Loaded="mainWindow_Loaded">
+    <Grid Background="LightSkyBlue">
+        <Label Content="Organizador de Libros por Editoriales, Autor, etc" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="584" FontWeight="Bold" FontSize="22" Foreground="#FF582727" Background="#FF8CC5C7"/>
+        <Button x:Name="btEditoriales" Content="Editoriales" HorizontalAlignment="Left" Margin="39,72,0,0" VerticalAlignment="Top" Height="49" Width="117" FontSize="16" Click="btEditoriales_Click"/>
+        <Button x:Name="btLibros" Content="Libros" HorizontalAlignment="Center" Margin="0,72,0,0" VerticalAlignment="Top" Height="49" Width="117" FontSize="16" Click="btLibros_Click"/>
+        <Button x:Name="btAutores" Content="Autores" HorizontalAlignment="Left" Margin="442,72,0,0" VerticalAlignment="Top" Height="49" Width="117" FontSize="16" Click="btAutores_Click"/>
+        <Button x:Name="btSalir" Content="Salir" HorizontalAlignment="Left" Margin="442,206,0,0" VerticalAlignment="Top" Height="49" Width="116" FontSize="16" Click="btSalir_Click"/>
+        <Button x:Name="btAcercade" Content="Acerca de" HorizontalAlignment="Left" Margin="442,134,0,0" VerticalAlignment="Top" Height="49" Width="117" FontSize="16" Click="btAcercade_Click"/>
+        <Button x:Name="btConsultar" Content="Consultar" HorizontalAlignment="Left" Margin="442,278,0,0" VerticalAlignment="Top" Height="49" Width="116" FontSize="16" Click="btConsultar_Click"/>
+        <Button x:Name="btLibrerias" Content="Librerías" HorizontalAlignment="Left" Margin="39,134,0,0" VerticalAlignment="Top" Height="49" Width="117" FontSize="16" Click="btLibrerias_Click"/>
+        <Button x:Name="btGeneros" Content="Géneros" HorizontalAlignment="Left" Margin="39,206,0,0" VerticalAlignment="Top" Height="49" Width="117" FontSize="16" Click="btGeneros_Click"/>
+        <Label Content="Libros Clasificados por Autor, Editorial, Librerías y Géneros:" HorizontalAlignment="Left" Margin="10,287,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Image HorizontalAlignment="Center" Height="136" Margin="0,134,0,0" VerticalAlignment="Top" Source="/imagenLibros.png" Width="158"/>
+
+
+    </Grid>
+</Window>

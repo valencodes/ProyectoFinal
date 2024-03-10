@@ -1,0 +1,60 @@
+﻿<Window x:Class="ProyectoFinal.winGeneros"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoFinal"
+        mc:Ignorable="d"
+        Title="winGeneros" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid Margin="5" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox Background="LightGray" Margin="9,4,5,10" Name="lbGeneros" SelectionChanged="lbGeneros_SelectionChanged"/>
+
+        <Grid Grid.Column="1" Background="LightGreen" Margin="0,5,5,5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid x:Name="gridTextbox" Grid.Row="0" Margin="7,0,3,0" Background="Bisque">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Campos de Género -->
+                <Label Margin="5" Content="Código:" Grid.Row="0"/>
+                <TextBox Grid.Column="1" Margin="5" Height="25" x:Name="tbCodigo" IsReadOnly="True" Grid.Row="0"/>
+                <Label Margin="5" Content="Nombre:" Grid.Row="1"/>
+                <TextBox Grid.Column="1" Margin="5" Height="25" x:Name="tbNombreGenero" IsReadOnly="True" Grid.Row="1"/>
+            </Grid>
+
+            <UniformGrid x:Name="uGridNuevoModificarEliminar" Grid.Row="1" Columns="3" Background="Blue" Margin="7,0,7,7">
+                <Button Margin="3" Padding="3" Name="btNuevo" Click="btNuevo_Click">Nuevo</Button>
+                <Button Margin="3" Padding="3" Name="btModificar" Click="btModificar_Click">Modificar</Button>
+                <Button Margin="3" Padding="3" Name="btEliminar" Click="btEliminar_Click">Eliminar</Button>
+            </UniformGrid>
+
+            <UniformGrid Name="uGridGuardarActualizarCancelar" Grid.Row="2" Columns="3" Background="red" Margin="7,0,7,7">
+                <Button Margin="3" Padding="3" x:Name="btGuardar" IsEnabled="False" Click="btGuardar_Click">Guardar</Button>
+                <Button Margin="3" Padding="3" x:Name="btActualizar" IsEnabled="False" Click="btActualizar_Click">Actualizar</Button>
+                <Button Margin="3" Padding="3" x:Name="btCancelar" IsEnabled="False" Click="btCancelar_Click">Cancelar</Button>
+                <Button Margin="3" Padding="3" Name="btSalir" Click="btSalir_Click">Salir</Button>
+            </UniformGrid>
+        </Grid>
+    </Grid>
+</Window>
+
